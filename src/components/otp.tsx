@@ -4,7 +4,7 @@ import { setSession } from '../reducer/authSlice';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
-function OTP() {
+function Otp() {
   const [code, setCode] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ function OTP() {
       localStorage.removeItem('otp');
       navigate('/dashboard');
     } else {
-      alert('❌ Invalid OTP');
+      alert('Invalid OTP');
     }
   };
 
@@ -54,4 +54,4 @@ function OTP() {
   );
 }
 
-export default OTP;
+export default Otp;

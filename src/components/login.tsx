@@ -38,7 +38,7 @@ function Login() {
 
       dispatch(setSession({ user, token }));
 
-      alert(`✅ OTP sent to your email (simulated): ${otp}`);
+      alert(`Your OTP: ${otp}`);
       navigate("/otp");
     } catch (err) {
       setError(err.response?.data?.error || "Something went wrong");
@@ -47,7 +47,6 @@ function Login() {
 
   return (
     <div className="w-full">
-      <title>HoopSquad - Login </title>
       <div className="flex lg:flex-row flex-col h-screen lg:w-full justify-center md:mx-0 mx-5 gap-5 items-center">
         <img
           src="/login.jpeg"
